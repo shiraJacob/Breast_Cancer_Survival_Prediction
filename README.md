@@ -6,7 +6,7 @@ Application of machine learning classification algorithms (XGBoost, RF, SVM, MLP
 Install the required packages with:
 ```bash
 pip install numpy pandas seaborn matplotlib scikit-learn xgboost imbalanced-learn statsmodels tabulate
-
+```
 Make sure Breast_Cancer.csv is in the same directory as main.py, then run: main.py.
 
 ## Dataset:
@@ -16,7 +16,7 @@ Make sure Breast_Cancer.csv is in the same directory as main.py, then run: main.
 
 Full statistical analysis was performed for each feature and the interactions between them.
 <div align="center"> <img src="https://github.com/user-attachments/assets/d1859c02-d889-4b40-b6ff-ecef736475ea" width="400"/> </div>
-<sub>Left: Interaction between Tumor Size and N Stage | Right: Tumor Size and T Stage</sub>
+<div align="center"> <sub>Left: Interaction between Tumor Size and N Stage | Right: Tumor Size and T Stage</sub> </div>
 
 ## Data Preparation
 - **Outlier Handling:** Using a threshold of 3*IQR, suitable for medical data.
@@ -26,10 +26,10 @@ Full statistical analysis was performed for each feature and the interactions be
 - **Categorical Encoding:** One-hot encoding for non-ordinal variables; ordinal mapping for ordered variables.
 - **Feature Engineering:** Created a new feature – ratio of positive to examined lymph nodes.
 <div align="center"> <img src="https://github.com/user-attachments/assets/3482cb41-c5c4-4ca7-84a2-8195167e944a" width="400"/> </div>
-<sub>Before data preparation</sub>
+<div align="center"><sub>Before data preparation</sub> </div>
 
 <div align="center"> <img src="https://github.com/user-attachments/assets/26339a7c-3962-4405-923d-33c8cf65aadf" width="400"/> </div>
-<sub>After data preparation</sub>
+<div align="center"> <sub>After data preparation</sub> </div>
 
 ## Feature Selection
 - Applied Recursive Feature Elimination with Cross-Validation (RFECV) using a Random Forest classifier and AUC-ROC as the evaluation metric.
@@ -47,6 +47,7 @@ Full statistical analysis was performed for each feature and the interactions be
 
 ## Results & Discussion
 <div align="center"> <img src="https://github.com/user-attachments/assets/65314a16-6fdc-417a-bfb0-de6ad50afb3c" width="400"/> </div>
+
 - MLP Achieved the highest AUC-ROC (0.867) but showed poor Recall (0.661) and F2 Score (0.6842).
 - XGBoost the best balanced performance with high AUC-ROC (0.8662), Recall (0.8813) and F2 Score (0.7715).
 - Feature importance: SurvivalMonthsNormalized and RegionalNodeRatio emerged as key predictors.
