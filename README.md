@@ -1,13 +1,15 @@
 # Breast Cancer Survival Prediction using Machine Learning
 Application of machine learning classification algorithms (XGBoost, RF, SVM, MLP) to predict breast cancer patient survival, enhancing predictive accuracy through data preprocessing, feature engineering, and RFECV-based feature selection, effectively addressing challenges of imbalanced medical datasets.
 
-🔧 **Installation & Setup**
-
+## 🔧 Installation & Setup
 Install the required packages with:
 ```bash
 pip install numpy pandas seaborn matplotlib scikit-learn xgboost imbalanced-learn statsmodels tabulate
 ```
-Make sure Breast_Cancer.csv is in the same directory as main.py, then run: main.py.
+Make sure Breast_Cancer.csv is in the same directory as main.py, then run:
+```bash
+Python main.py.
+```
 
 ## Dataset:
 - 4,024 records from the Kaggle dataset based on the November 2017 update of the National Cancer Institute (NCI) SEER program.
@@ -15,7 +17,7 @@ Make sure Breast_Cancer.csv is in the same directory as main.py, then run: main.
 - Highly imbalanced: ~15% did not survive, ~85% survived.
 
 Full statistical analysis was performed for each feature and the interactions between them.
-<div align="center"> <img src="https://github.com/user-attachments/assets/d1859c02-d889-4b40-b6ff-ecef736475ea" width="400"/> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/d1859c02-d889-4b40-b6ff-ecef736475ea" height= "300" width="500"/> </div>
 <div align="center"> <sub>Left: Interaction between Tumor Size and N Stage | Right: Tumor Size and T Stage</sub> </div>
 
 ## Data Preparation
@@ -25,11 +27,14 @@ Full statistical analysis was performed for each feature and the interactions be
 - **Normalization:** Min-Max scaling of quantitative variables.
 - **Categorical Encoding:** One-hot encoding for non-ordinal variables; ordinal mapping for ordered variables.
 - **Feature Engineering:** Created a new feature – ratio of positive to examined lymph nodes.
-<div align="center"> <img src="https://github.com/user-attachments/assets/3482cb41-c5c4-4ca7-84a2-8195167e944a" width="400"/> </div>
-<div align="center"><sub>Before data preparation</sub> </div>
 
-<div align="center"> <img src="https://github.com/user-attachments/assets/26339a7c-3962-4405-923d-33c8cf65aadf" width="400"/> </div>
+<div align="center"><sub>Before data preparation</sub> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/3482cb41-c5c4-4ca7-84a2-8195167e944a" width="400"/> </div>
+
+
 <div align="center"> <sub>After data preparation</sub> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/26339a7c-3962-4405-923d-33c8cf65aadf" width="400"/> </div>
+
 
 ## Feature Selection
 - Applied Recursive Feature Elimination with Cross-Validation (RFECV) using a Random Forest classifier and AUC-ROC as the evaluation metric.
@@ -48,6 +53,7 @@ Full statistical analysis was performed for each feature and the interactions be
 ## Results & Discussion
 <div align="center"> <img src="https://github.com/user-attachments/assets/65314a16-6fdc-417a-bfb0-de6ad50afb3c" width="400"/> </div>
 
+
 - MLP Achieved the highest AUC-ROC (0.867) but showed poor Recall (0.661) and F2 Score (0.6842).
 - XGBoost the best balanced performance with high AUC-ROC (0.8662), Recall (0.8813) and F2 Score (0.7715).
 - Feature importance: SurvivalMonthsNormalized and RegionalNodeRatio emerged as key predictors.
@@ -58,7 +64,7 @@ Full statistical analysis was performed for each feature and the interactions be
 - Tuned models with cross-validation and evaluated them on imbalanced data.
 - Gained experience with model comparison and metric-based selection (AUC-ROC, Recall, F2).
 
-👥 This project was completed in collaboration with: Shira Aronovich, Orin Cohen, Shir Greif  
+👥 This project was completed in collaboration with: Shira Aronovich, Orin Cohen, Shir Greif  .
 
 
 
