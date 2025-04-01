@@ -17,7 +17,7 @@ Python main.py.
 - Highly imbalanced: ~15% did not survive, ~85% survived.
 
 Full statistical analysis was performed for each feature and the interactions between them.
-<div align="center"> <img src="https://github.com/user-attachments/assets/d1859c02-d889-4b40-b6ff-ecef736475ea" height= "300" width="500"/> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/d1859c02-d889-4b40-b6ff-ecef736475ea" width="600"/> </div>
 <div align="center"> <sub>Left: Interaction between Tumor Size and N Stage | Right: Tumor Size and T Stage</sub> </div>
 
 ## Data Preparation
@@ -29,11 +29,11 @@ Full statistical analysis was performed for each feature and the interactions be
 - **Feature Engineering:** Created a new feature – ratio of positive to examined lymph nodes.
 
 <div align="center"><sub>Before data preparation</sub> </div>
-<div align="center"> <img src="https://github.com/user-attachments/assets/3482cb41-c5c4-4ca7-84a2-8195167e944a" width="400"/> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/3482cb41-c5c4-4ca7-84a2-8195167e944a" width="600"/> </div>
 
 
 <div align="center"> <sub>After data preparation</sub> </div>
-<div align="center"> <img src="https://github.com/user-attachments/assets/26339a7c-3962-4405-923d-33c8cf65aadf" width="400"/> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/26339a7c-3962-4405-923d-33c8cf65aadf" width="600"/> </div>
 
 
 ## Feature Selection
